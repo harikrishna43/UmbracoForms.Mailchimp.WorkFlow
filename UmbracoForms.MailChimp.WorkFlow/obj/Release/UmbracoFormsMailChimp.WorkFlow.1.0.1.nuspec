@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>UmbracoFormsMailChimp.WorkFlow</id>
+    <version>1.0.1</version>
+    <authors>Harikrishna Parmar</authors>
+    <owners>Harikrishna Parmar</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Submit form with MailChimp workflow type. Subscribe user using Mailchimp.</description>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="MailChimp.NET" version="1.1.92" exclude="Build,Analyzers" />
+        <dependency id="UmbracoForms.Core" version="7.0.3" exclude="Build,Analyzers" />
+        <dependency id="log4net" version="2.0.8" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\bin\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.dll" target="lib\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.dll" />
+  </files>
+</package>
