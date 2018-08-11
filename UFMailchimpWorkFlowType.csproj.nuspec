@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>UmbracoForm.MailChimp.WorkFlow</id>
+    <version>1.1.0</version>
+    <authors>Harikrishna Parmar</authors>
+    <owners>Harikrishna Parmar</owners>
+    <!-- <licenseUrl></licenseUrl>
+    <projectUrl></projectUrl>
+    <iconUrl></iconUrl> -->
+    <!-- <requireLicenseAcceptance>False</requireLicenseAcceptance> -->
+    <description>Umbraco Forms Mailchimp Integration WorkflowType</description>
+    <releaseNotes>Update the code and dependencies.</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>UmbracoForms,Mailchimp Subscriber to list</tags>
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="7.9.0" />
+      <dependency id="UmbracoForms.Core" version="7.0.3" />
+      <dependency id="MailChimp.NET" version="1.1.92" />
+    </dependencies>
+  </metadata>
+  <files>
+        <file src="*\bin\Debug\UFMailchimpWorkFlowType.dll" target="lib" />
+    </files>
+</package>

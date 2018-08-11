@@ -1,9 +1,0 @@
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\bin\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.deps.json
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\bin\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.dll
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\bin\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.pdb
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\obj\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.csproj.CoreCompileInputs.cache
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\obj\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.AssemblyInfoInputs.cache
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\obj\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.AssemblyInfo.cs
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\obj\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.dll
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\obj\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.pdb
-D:\Packages\UmbracoForms.MailChimp.WorkFlow\UmbracoForms.MailChimp.WorkFlow\obj\Release\netstandard2.0\UmbracoForms.MailChimp.WorkFlow.csprojResolveAssemblyReference.cache

@@ -11,9 +11,9 @@ using Umbraco.Forms.Core.Attributes;
 using Umbraco.Forms.Core.Enums;
 using Umbraco.Forms.Core.Providers.Models;
 
-namespace UmbracoForms.MailChimp
+namespace UFMailchimpWorkFlowType
 {
-    public class UmbracoMacilChimpFlowType : WorkflowType
+    public class UFMailChimpWorkFlowType : WorkflowType
     {
         [Setting("API KEY", description = "Enter the Mailchimp API key.", view = "TextField")]
         public string ApiKey { get; set; }
@@ -26,9 +26,9 @@ namespace UmbracoForms.MailChimp
 
         public string Email { get; set; }
 
-        public UmbracoMacilChimpFlowType()
+        public UFMailChimpWorkFlowType()
         {
-            this.Id = new Guid("aBc142b1-f12e-be01-af31-9a5860AB4510");//00000000-0000-0000-0000-000000000000
+            this.Id = new Guid("aBc142b1-f12e-be01-af31-9a5860AB4510");
             this.Name = "Subscribe(MailChimp)";
             this.Description = "Subscribe email address using MailChimp";
             this.Icon = "icon-autofill";
@@ -86,7 +86,7 @@ namespace UmbracoForms.MailChimp
             }
             catch (Exception ex)
             {
-                Umbraco.Core.Logging.LogHelper.Error<string>("error : FlowType", ex);
+                Umbraco.Core.Logging.LogHelper.Error<string>("error : UFMailchimp FlowType", ex);
                 return WorkflowExecutionStatus.Failed;
             }
         }
