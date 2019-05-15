@@ -1,6 +1,5 @@
-
+.vs
 packages/
 UFMailchimpWorkFlowType/App_Data/
 UFMailchimpWorkFlowType/bin
-UFMailchimpWorkFlowType/obj/
-UFMailchimpWorkFlowType/obj/
+UFMailchimpWorkFlowType/obj
