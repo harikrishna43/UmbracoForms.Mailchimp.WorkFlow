@@ -1,30 +1,34 @@
-﻿using MailChimp;
-using MailChimp.Helper;
-using MailChimp.Lists;
-using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MailChimp.Net;
+using MailChimp.Net.Models;
+using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 using Umbraco.Forms.Core;
-using Umbraco.Forms.Core.Attributes;
 using Umbraco.Forms.Core.Enums;
 using Umbraco.Forms.Core.Providers.Models;
+using System.Threading.Tasks;
 
 namespace UFMailchimpWorkFlowType
 {
     public class UFMailChimpWorkFlowType : WorkflowType
     {
-        [Setting("API KEY", description = "Enter the Mailchimp API key.", view = "TextField")]
+        #region Settings
+
+        [Umbraco.Forms.Core.Attributes.Setting("API KEY", description = "Enter the Mailchimp API key.", view = "TextField")]
         public string ApiKey { get; set; }
 
-        [Setting("List ID", description = "Enter the Mailchimp List ID.)", view = "TextField")]
+        [Umbraco.Forms.Core.Attributes.Setting("List ID", description = "Enter the Mailchimp List ID.)", view = "TextField")]
         public string ListID { get; set; }
 
-        [Setting("Fields", description = "Map the needed fields .Minimum Email field for subscribe.", view = "FieldMapper")]
+        [Umbraco.Forms.Core.Attributes.Setting("Fields", description = "Map the needed fields .Minimum Email field for subscribe.", view = "FieldMapper")]
         public string Fields { get; set; }
 
-        public string Email { get; set; }
+        [Umbraco.Forms.Core.Attributes.Setting("Tags", view = "TextField", description = "List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: Bokio User;Help Center")]
+        public string Tags { get; set; }
+
+        #endregion
 
         public UFMailChimpWorkFlowType()
         {
@@ -32,7 +36,6 @@ namespace UFMailchimpWorkFlowType
             this.Name = "Subscribe(MailChimp)";
             this.Description = "Subscribe email address using MailChimp";
             this.Icon = "icon-autofill";
-            //this.Group = nameof(ApiKey);
         }
 
         public override List<Exception> ValidateSettings()
@@ -51,35 +54,22 @@ namespace UFMailchimpWorkFlowType
         {
             try
             {
-                List<FieldMapping> source = new List<FieldMapping>();
-                if (!string.IsNullOrEmpty(this.Fields))
-                    source = JsonConvert.DeserializeObject<IEnumerable<FieldMapping>>(this.Fields).ToList<FieldMapping>();
-
-                var data = new MergeVar();
-                if (source.Any<FieldMapping>())
+                var data = ParseEmailAndMergeFields(record, this.Fields);
+                if (string.IsNullOrEmpty(data.Item1))
                 {
-                    foreach (FieldMapping fieldMapping in source)
-                    {
-
-                        string alias = fieldMapping.Alias;
-                        string str = string.IsNullOrEmpty(fieldMapping.StaticValue) ? record.RecordFields[new Guid(fieldMapping.Value)].ValuesAsString(false) : fieldMapping.StaticValue;
-                        bool isEmail = Regex.IsMatch(str, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
-                        if (isEmail)
-                        {
-                            this.Email = str;
-                        }
-                        data.Add(alias, str);
-                    }
+                    throw new Exception("Email is missing");
                 }
 
-                var mc = new MailChimpManager(this.ApiKey);
-                var subsciberListID = this.ListID;
-
-                var email = new EmailParameter()
+                Task.Run(async () =>
                 {
-                    Email = this.Email
-                };
-                EmailParameter results = mc.Subscribe(subsciberListID, email, data, "html", false, true, false, false);
+                    await SubscribeMember(data.Item1, data.Item2);
+
+                    var tagNames = ParseTags(this.Tags);
+                    if (tagNames.Count() > 0)
+                    {
+                        await TagMember(data.Item1, tagNames);
+                    }
+                });
 
                 return WorkflowExecutionStatus.Completed;
 
@@ -90,5 +80,101 @@ namespace UFMailchimpWorkFlowType
                 return WorkflowExecutionStatus.Failed;
             }
         }
+
+        private async Task SubscribeMember(string email, Dictionary<string, object> mergeFields)
+        {
+            var mc = new MailChimpManager(this.ApiKey);
+
+            var member = new Member
+            {
+                EmailAddress = email,
+                Status = Status.Subscribed,
+                EmailType = "html",
+                TimestampOpt = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                StatusIfNew = Status.Subscribed,
+                MergeFields = mergeFields,
+            };
+
+            await mc.Members.AddOrUpdateAsync(this.ListID, member);
+        }
+
+        private async Task TagMember(string email, IEnumerable<string> tagNames)
+        {
+            var mc = new MailChimpManager(this.ApiKey);
+
+            var tagIds = await GetExistingTagIds(tagNames);
+            var member = new Member { EmailAddress = email };
+
+            foreach (int tagId in tagIds)
+            {
+                await mc.ListSegments.AddMemberAsync(this.ListID, $"{tagId}", member);
+            }
+        }
+
+        private async Task<IEnumerable<int>> GetExistingTagIds(IEnumerable<string> tagNames)
+        {
+            var mc = new MailChimpManager(this.ApiKey);
+
+            var tagsMap = (await mc.ListSegments.GetAllAsync(this.ListID))
+                .Where(s => s.Type == "static")
+                .Aggregate(
+                    new Dictionary<string, int>(),
+                    (dict, seg) => {
+                        dict.Add(seg.Name, seg.Id);
+                        return dict;
+                    }
+                );
+
+            var tagIds = tagNames
+                .Where(t => tagsMap.ContainsKey(t))
+                .Select(t => tagsMap[t]);
+
+            return tagIds;
+        }
+
+        #region Helpers
+
+        private static Tuple<string, Dictionary<string, object>> ParseEmailAndMergeFields(Record record, string fields)
+        {
+            if (string.IsNullOrEmpty(fields))
+            {
+                return null;
+            }
+
+            List<FieldMapping> source = JsonConvert.DeserializeObject<IEnumerable<FieldMapping>>(fields).ToList<FieldMapping>();
+            if (!source.Any<FieldMapping>())
+            {
+                return null;
+            }
+
+            string email = "";
+            var mergeFields = new Dictionary<string, object>();
+
+            foreach (FieldMapping fieldMapping in source)
+            {
+
+                string alias = fieldMapping.Alias;
+                string str = string.IsNullOrEmpty(fieldMapping.StaticValue) ? record.RecordFields[new Guid(fieldMapping.Value)].ValuesAsString(false) : fieldMapping.StaticValue;
+                if (IsEmail(str))
+                {
+                    email = str;
+                }
+                mergeFields.Add(alias, str);
+            }
+
+            return Tuple.Create(email, mergeFields);
+        }
+
+        private static IEnumerable<string> ParseTags(string tags)
+        {
+            return tags.Split(';').Select(t => t.Trim());
+        }
+
+        private static bool IsEmail(string str)
+        {
+            return Regex.IsMatch(str, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+        }
+
+        #endregion
     }
 }
