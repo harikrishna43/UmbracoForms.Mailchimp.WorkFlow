@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>UmbracoForm.MailChimp.WorkFlow.v2</id>
+    <version>2.0.0</version>
+    <title>UmbracoForm.MailChimp.WorkFlow</title>
+    <authors>Harikrishna Parmar</authors>
+    <owners>Harikrishna Parmar</owners>
+    <licenseUrl>https://github.com/tranquan/UmbracoForms.Mailchimp.WorkFlow</licenseUrl>
+    <projectUrl>https://github.com/tranquan/UmbracoForms.Mailchimp.WorkFlow</projectUrl>
+    <description>Umbraco Forms Mailchimp Integration WorkflowType</description>
+    <releaseNotes>Update to Mailchimp api v3; Add Tags</releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>UmbracoForms,Mailchimp Subscriber to list</tags>
+  </metadata>
+</package>
