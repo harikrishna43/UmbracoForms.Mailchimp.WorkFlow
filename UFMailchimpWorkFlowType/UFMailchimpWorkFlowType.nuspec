@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>UmbracoForm.MailChimp.WorkFlow.v2</id>
-    <version>2.0.4</version>
+    <version>2.0.4.1</version>
     <title>UmbracoForm.MailChimp.WorkFlow</title>
     <authors>Harikrishna Parmar - Quan Tran</authors>
     <owners>Quan Tran</owners>
