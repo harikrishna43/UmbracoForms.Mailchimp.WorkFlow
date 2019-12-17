@@ -171,7 +171,7 @@ namespace UFMailchimpWorkFlowType
 
         private static IEnumerable<string> ParseTags(string tags)
         {
-            return tags.Split(';').Select(t => t.Trim());
+            return string.IsNullOrEmpty(tags) ? new List<string>() : tags.Split(';').Select(t => t.Trim());
         }
 
         private static bool IsEmail(string str)
