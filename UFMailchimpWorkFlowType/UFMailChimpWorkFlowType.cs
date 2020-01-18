@@ -1,14 +1,18 @@
-﻿using System;
+﻿/**
+ * Source: https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using MailChimp.Net;
 using MailChimp.Net.Models;
 using Newtonsoft.Json;
-using System.Text.RegularExpressions;
 using Umbraco.Forms.Core;
 using Umbraco.Forms.Core.Enums;
 using Umbraco.Forms.Core.Providers.Models;
-using System.Threading.Tasks;
+using UmbracoSetting = Umbraco.Forms.Core.Attributes.Setting;
 
 namespace UFMailchimpWorkFlowType
 {
@@ -16,16 +20,16 @@ namespace UFMailchimpWorkFlowType
     {
         #region Settings
 
-        [Umbraco.Forms.Core.Attributes.Setting("API KEY", description = "Enter the Mailchimp API key.", view = "TextField")]
+        [UmbracoSetting("API KEY", view = "TextField", description = "Enter the Mailchimp API key.")]
         public string ApiKey { get; set; }
 
-        [Umbraco.Forms.Core.Attributes.Setting("List ID", description = "Enter the Mailchimp List ID.)", view = "TextField")]
+        [UmbracoSetting("List ID", view = "TextField", description = "Enter the Mailchimp List ID.)")]
         public string ListID { get; set; }
 
-        [Umbraco.Forms.Core.Attributes.Setting("Fields", description = "Map the needed fields .Minimum Email field for subscribe.", view = "FieldMapper")]
+        [UmbracoSetting("Fields", view = "FieldMapper", description = "Map the needed fields .Minimum Email field for subscribe.")]
         public string Fields { get; set; }
 
-        [Umbraco.Forms.Core.Attributes.Setting("Tags", view = "TextField", description = "List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: Bokio User;Help Center")]
+        [UmbracoSetting("Tags", view = "TextField", description = "List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: User; Help Center")]
         public string Tags { get; set; }
 
         #endregion
@@ -167,7 +171,7 @@ namespace UFMailchimpWorkFlowType
 
         private static IEnumerable<string> ParseTags(string tags)
         {
-            return tags.Split(';').Select(t => t.Trim());
+            return string.IsNullOrEmpty(tags) ? new List<string>() : tags.Split(';').Select(t => t.Trim());
         }
 
         private static bool IsEmail(string str)

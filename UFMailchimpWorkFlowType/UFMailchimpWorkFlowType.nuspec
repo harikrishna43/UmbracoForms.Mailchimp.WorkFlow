@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package >
   <metadata>
     <id>UmbracoForm.MailChimp.WorkFlow.v2</id>
     <version>2.0.5</version>
@@ -12,13 +12,5 @@
     <releaseNotes>Update to Mailchimp api v3; Add Tags</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>UmbracoForms,Mailchimp Subscriber to list</tags>
-    <dependencies>
-      <dependency id="UmbracoCms.Core" version="7.9.0" />
-      <dependency id="UmbracoForms.Core" version="7.0.3" />
-      <dependency id="MailChimp.NET.V3" version="4.0.0" />
-    </dependencies>
   </metadata>
-  <files>
-    <file src="bin\Debug\UFMailchimpWorkFlowType.dll" target="lib" />
-  </files>
 </package>

@@ -21,3 +21,19 @@ fetures:
 
 -Resolved bugs and make it  more user friendly.
 
+
+
+## Developer Notes
+
+To generate a new nuget package
+
+- Increase version in `UFMailchimpWorkFlowType/UFMailchimpWorkFlowType.csproj.nuspec`;
+- Check dependencies list & update it if needed. `nuget` doesn't automatically generate the dependencies list
+- Run command in Package Console Management
+```sh
+nuget pack UFMailchimpWorkFlowType/UFMailchimpWorkFlowType.csproj.nuspec
+```
+
+** Notes **
+This project seems using the old format, that's why nuget package doesn't work really well
+https://docs.microsoft.com/en-us/nuget/resources/check-project-format
