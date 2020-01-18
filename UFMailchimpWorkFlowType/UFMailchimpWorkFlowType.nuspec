@@ -5,7 +5,7 @@
     <version>2.0.5</version>
     <title>UmbracoForm.MailChimp.WorkFlow</title>
     <authors>Harikrishna Parmar - Quan Tran</authors>
-    <owners>Quan Tran</owners>
+    <owners>Harikrishna Parmar</owners>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/tranquan/UmbracoForms.Mailchimp.WorkFlow</projectUrl>
     <description>Umbraco Forms Mailchimp Integration WorkflowType</description>
