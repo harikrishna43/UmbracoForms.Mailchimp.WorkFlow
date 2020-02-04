@@ -1,16 +1,26 @@
-<?xml version="1.0"?>
-<package >
+<?xml version="1.0" encoding="utf-8"?>
+<package>
   <metadata>
-    <id>UmbracoForm.MailChimp.WorkFlow.v2</id>
-    <version>2.0.5</version>
+    <id>UmbracoForm.MailChimp.WorkFlow</id>
+    <version>2.1.1</version>
     <title>UmbracoForm.MailChimp.WorkFlow</title>
-    <authors>Harikrishna Parmar - Quan Tran</authors>
+    <authors>Harikrishna Parmar</authors>
     <owners>Harikrishna Parmar</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/tranquan/UmbracoForms.Mailchimp.WorkFlow</projectUrl>
+    <projectUrl>https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow/</projectUrl>
+    <iconUrl>https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow/blob/master/mailchimpICO.png</iconUrl>
     <description>Umbraco Forms Mailchimp Integration WorkflowType</description>
-    <releaseNotes>Update to Mailchimp api v3; Add Tags</releaseNotes>
-    <copyright>Copyright 2019</copyright>
-    <tags>UmbracoForms,Mailchimp Subscriber to list</tags>
+    <releaseNotes>Updated Umbraco-Umbracoforms-Mailchimp api v3</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>UmbracoForms,Mailchimp Subscriber to list,umraco form workflow,Mailchimp</tags>
+    <dependencies>
+      <dependency id="UmbracoCms.Core" version="7.15.3" />
+      <dependency id="UmbracoForms.Core" version="7.3.0" />
+      <dependency id="MailChimp.Net.V3" version="4.2.1" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="bin\Debug\UFMailchimpWorkFlowType.dll" target="lib" />
+  </files>
 </package>

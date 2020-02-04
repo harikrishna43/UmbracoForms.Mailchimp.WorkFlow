@@ -11,7 +11,7 @@
     <iconUrl>https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow/blob/master/mailchimpICO.png</iconUrl>
     <description>Umbraco Forms Mailchimp Integration WorkflowType</description>
     <releaseNotes>Update to Mailchimp api v3; Add Tags</releaseNotes>
-    <copyright>Copyright 2019</copyright>
+    <copyright>Copyright 2020</copyright>
     <tags>UmbracoForms,Mailchimp Subscriber to list,umraco form workflow,Mailchimp</tags>
     <dependencies>
       <dependency id="UmbracoCms.Core" version="7.15.3" />
