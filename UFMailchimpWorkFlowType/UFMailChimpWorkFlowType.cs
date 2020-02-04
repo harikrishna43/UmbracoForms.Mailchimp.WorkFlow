@@ -11,6 +11,7 @@ using MailChimp.Net.Models;
 using Newtonsoft.Json;
 using Umbraco.Forms.Core;
 using Umbraco.Forms.Core.Enums;
+using Umbraco.Forms.Core.Persistence.Dtos;
 using Umbraco.Forms.Core.Providers.Models;
 using UmbracoSetting = Umbraco.Forms.Core.Attributes.Setting;
 
@@ -20,16 +21,16 @@ namespace UFMailchimpWorkFlowType
     {
         #region Settings
 
-        [UmbracoSetting("API KEY", view = "TextField", description = "Enter the Mailchimp API key.")]
+        [UmbracoSetting("API KEY", View = "TextField", Description =  "Enter the Mailchimp API key.")]
         public string ApiKey { get; set; }
 
-        [UmbracoSetting("List ID", view = "TextField", description = "Enter the Mailchimp List ID.")]
+        [UmbracoSetting("List ID", View = "TextField", Description = "Enter the Mailchimp List ID.")]
         public string ListID { get; set; }
 
-        [UmbracoSetting("Fields", view = "FieldMapper", description = "Map the needed fields .Minimum Email field for subscribe.")]
+        [UmbracoSetting("Fields", View = "FieldMapper", Description ="Map the needed fields .Minimum Email field for subscribe.")]
         public string Fields { get; set; }
 
-        [UmbracoSetting("Tags", view = "TextField", description = "List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: User; Help Center")]
+        [UmbracoSetting("Tags", View = "TextField", Description ="List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: User; Help Center")]
         public string Tags { get; set; }
 
         #endregion
@@ -52,37 +53,6 @@ namespace UFMailchimpWorkFlowType
             if (string.IsNullOrEmpty(this.Fields))
                 exceptionList.Add(new Exception("'Fields' setting has not been set. set minimum email field.'"));
             return exceptionList;
-        }
-
-        public override WorkflowExecutionStatus Execute(Record record, RecordEventArgs e)
-        {
-            try
-            {
-                var data = ParseEmailAndMergeFields(record, this.Fields);
-                if (string.IsNullOrEmpty(data.Item1))
-                {
-                    throw new Exception("Email is missing");
-                }
-
-                Task.Run(async () =>
-                {
-                    await SubscribeMember(data.Item1, data.Item2);
-
-                    var tagNames = ParseTags(this.Tags);
-                    if (tagNames.Count() > 0)
-                    {
-                        await TagMember(data.Item1, tagNames);
-                    }
-                });
-
-                return WorkflowExecutionStatus.Completed;
-
-            }
-            catch (Exception ex)
-            {
-                Umbraco.Core.Logging.LogHelper.Error<string>("error : UFMailchimp FlowType", ex);
-                return WorkflowExecutionStatus.Failed;
-            }
         }
 
         private async Task SubscribeMember(string email, Dictionary<string, object> mergeFields)
@@ -177,6 +147,37 @@ namespace UFMailchimpWorkFlowType
         private static bool IsEmail(string str)
         {
             return Regex.IsMatch(str, @"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z", RegexOptions.IgnoreCase);
+        }
+
+        public override WorkflowExecutionStatus Execute(Record record, RecordEventArgs e)
+        {
+            try
+            {
+                var data = ParseEmailAndMergeFields(record, this.Fields);
+                if (string.IsNullOrEmpty(data.Item1))
+                {
+                    throw new Exception("Email is missing");
+                }
+
+                Task.Run(async () =>
+                {
+                    await SubscribeMember(data.Item1, data.Item2);
+
+                    var tagNames = ParseTags(this.Tags);
+                    if (tagNames.Count() > 0)
+                    {
+                        await TagMember(data.Item1, tagNames);
+                    }
+                });
+
+                return WorkflowExecutionStatus.Completed;
+
+            }
+            catch (Exception ex)
+            {
+                Umbraco.Core.Composing.Current.Logger.Error(typeof(UFMailChimpWorkFlowType), ex);
+                return WorkflowExecutionStatus.Failed;
+            }
         }
 
         #endregion
