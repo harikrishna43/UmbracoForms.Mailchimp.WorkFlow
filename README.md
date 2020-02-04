@@ -21,7 +21,7 @@ fetures:
 
 -Resolved bugs and make it  more user friendly.
 
--- Updated Package 04-FEB-2020 ---
+# Updated Package 04-FEB-2020 ---
 Updated 
   - umbracoCMS 7.15.3
   - Umbracoform 7.3.0
