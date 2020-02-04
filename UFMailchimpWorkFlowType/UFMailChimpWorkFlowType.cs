@@ -23,7 +23,7 @@ namespace UFMailchimpWorkFlowType
         [UmbracoSetting("API KEY", view = "TextField", description = "Enter the Mailchimp API key.")]
         public string ApiKey { get; set; }
 
-        [UmbracoSetting("List ID", view = "TextField", description = "Enter the Mailchimp List ID.)")]
+        [UmbracoSetting("List ID", view = "TextField", description = "Enter the Mailchimp List ID.")]
         public string ListID { get; set; }
 
         [UmbracoSetting("Fields", view = "FieldMapper", description = "Map the needed fields .Minimum Email field for subscribe.")]
