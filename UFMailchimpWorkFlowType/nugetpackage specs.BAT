@@ -1,0 +1,2 @@
+nuget spec UFMailchimpWorkFlowType.csproj
+pause
