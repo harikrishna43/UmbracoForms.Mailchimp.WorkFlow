@@ -1,4 +1,4 @@
-# UmbracoForm.Mailchimp.WorkFlow
+# UmbracoForm.Mailchimp.WorkFlow 2.1.1
 
 This package is help to manage Umbraco form with Mailchimp.
 
@@ -20,6 +20,12 @@ fetures:
 - user can manage different form with different mailchimp list and account.
 
 -Resolved bugs and make it  more user friendly.
+
+-- Updated Package 04-FEB-2020 ---
+Updated 
+  - umbracoCMS 7.15.3
+  - Umbracoform 7.3.0
+  - MailChimp.V3 4.1.1
 
 
 
