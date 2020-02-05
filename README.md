@@ -26,9 +26,9 @@ Updated
   - umbracoCMS 7.15.3
   - Umbracoform 7.3.0
   - MailChimp.V3 4.1.1
-  
+  ```sh
 Install-Package UmbracoForm.MailChimp.WorkFlow -Version 2.1.1
-
+```
 
 ## Developer Notes
 
