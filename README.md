@@ -1,3 +1,7 @@
+# UmbracoForm.Mailchimp.WorkFlow 3.0.0
+This package is for Umbraco 8.4.1 and umbracoforms 8.3.0 
+https://www.nuget.org/packages/UmbracoForm.MailChimp.WorkFlow/
+
 # UmbracoForm.Mailchimp.WorkFlow 2.1.1
 
 This package is help to manage Umbraco form with Mailchimp.
