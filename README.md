@@ -35,6 +35,14 @@ Updated
   ```sh
 Install-Package UmbracoForm.MailChimp.WorkFlow -Version 2.1.1
 ```
+# Updated Package 07-SEP-2020 ---
+Fixed issues
+-Culture is not supported.
+-Parameter name: name
+-in is an invalid culture identifier.
+  ```sh
+Install-Package UmbracoForm.MailChimp.WorkFlow -Version 2.1.1
+```
 
 ## Developer Notes
 
