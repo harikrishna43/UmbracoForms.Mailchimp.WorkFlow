@@ -38,9 +38,9 @@ namespace UFMailchimpWorkFlowType
         public UFMailChimpWorkFlowType()
         {
             this.Id = new Guid("aBc142b1-f12e-be01-af31-9a5860AB4510");
-            this.Name = "Subscribe(MailChimp)";
+            this.Name = "Subscribe (MailChimp)";
             this.Description = "Subscribe email address using MailChimp";
-            this.Icon = "icon-autofill";
+            this.Icon = "icon-mindmap";
         }
 
         public override List<Exception> ValidateSettings()
