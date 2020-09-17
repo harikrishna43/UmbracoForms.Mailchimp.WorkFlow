@@ -41,7 +41,7 @@ Fixed issues
 -Parameter name: name
 -in is an invalid culture identifier.
   ```sh
-Install-Package UmbracoForm.MailChimp.WorkFlow -Version 3.0.1
+Install-Package UmbracoForm.MailChimp.WorkFlow -Version 3.0.2
 ```
 
 ## Developer Notes
