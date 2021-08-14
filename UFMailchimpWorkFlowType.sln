@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFMailchimpWorkFlowType", "UFMailchimpWorkFlowType\UFMailchimpWorkFlowType.csproj", "{91B4660E-1D1A-45E3-B660-A7491DC87029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Umbraco", "Umbraco\Umbraco.csproj", "{ADB4A910-8B7B-40A6-9822-8599F44D492F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{91B4660E-1D1A-45E3-B660-A7491DC87029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91B4660E-1D1A-45E3-B660-A7491DC87029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91B4660E-1D1A-45E3-B660-A7491DC87029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB4A910-8B7B-40A6-9822-8599F44D492F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB4A910-8B7B-40A6-9822-8599F44D492F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB4A910-8B7B-40A6-9822-8599F44D492F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB4A910-8B7B-40A6-9822-8599F44D492F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

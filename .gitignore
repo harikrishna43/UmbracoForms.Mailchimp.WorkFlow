@@ -4,3 +4,11 @@ packages/
 UFMailchimpWorkFlowType/App_Data/
 UFMailchimpWorkFlowType/bin
 UFMailchimpWorkFlowType/obj
+
+.fake
+.ionide
+/Umbraco/App_Data
+/Umbraco/App_Plugins/ModelsBuilder
+/Umbraco/bin
+/Umbraco/obj/Debug
+/Umbraco/Umbraco
