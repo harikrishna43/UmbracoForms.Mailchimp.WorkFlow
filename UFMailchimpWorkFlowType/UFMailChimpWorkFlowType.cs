@@ -24,14 +24,19 @@ namespace UFMailchimpWorkFlowType
         [UmbracoSetting("API KEY", View = "TextField", Description =  "Enter the Mailchimp API key.")]
         public string ApiKey { get; set; }
 
-        [UmbracoSetting("List ID", View = "TextField", Description = "Enter the Mailchimp List ID.")]
+        [UmbracoSetting("List ID (Audience)", View = "TextField", Description = "Enter the Mailchimp List ID.")]
         public string ListID { get; set; }
+
+        [UmbracoSetting("Double OptIn", View = "Checkbox", Description = "Send contacts an opt-in confirmation email when they subscribe to your audience.")]
+        public string DoubleOptIn { get; set; }
 
         [UmbracoSetting("Fields", View = "FieldMapper", Description ="Map the needed fields .Minimum Email field for subscribe.")]
         public string Fields { get; set; }
 
         [UmbracoSetting("Tags", View = "TextField", Description ="List of Tags. Separate by semicolon ';'. Tag must be created before being used. i.e: User; Help Center")]
         public string Tags { get; set; }
+
+
 
         #endregion
 
@@ -62,14 +67,18 @@ namespace UFMailchimpWorkFlowType
             var member = new Member
             {
                 EmailAddress = email,
-                Status = Status.Subscribed,
+                Status =  Status.Subscribed,
                 EmailType = "html",
                 TimestampOpt = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
                 StatusIfNew = Status.Subscribed,
                 MergeFields = mergeFields,
+                
             };
-
-            await mc.Members.AddOrUpdateAsync(this.ListID, member);
+            //if(this.DoubleOptIn.ToLower().Equals("true"))
+            //{
+            //    member.Status = Status.Pending;
+            //}
+            var result= await mc.Members.AddOrUpdateAsync(this.ListID, member);
         }
 
         private async Task TagMember(string email, IEnumerable<string> tagNames)
