@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2042
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31815.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UFMailchimpWorkFlowType", "UFMailchimpWorkFlowType\UFMailchimpWorkFlowType.csproj", "{91B4660E-1D1A-45E3-B660-A7491DC87029}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Our.Umbraco.Forms.Mailchimp.Workflow", "Our.Umbraco.Forms.Mailchimp.Workflow\Our.Umbraco.Forms.Mailchimp.Workflow.csproj", "{1033076A-7D87-484D-B88A-8765B6CA10FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{91B4660E-1D1A-45E3-B660-A7491DC87029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91B4660E-1D1A-45E3-B660-A7491DC87029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91B4660E-1D1A-45E3-B660-A7491DC87029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1033076A-7D87-484D-B88A-8765B6CA10FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1033076A-7D87-484D-B88A-8765B6CA10FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1033076A-7D87-484D-B88A-8765B6CA10FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1033076A-7D87-484D-B88A-8765B6CA10FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
