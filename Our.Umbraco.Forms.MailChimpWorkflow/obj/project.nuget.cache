@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CHbvbufFohmCNboFcR1O63uCajCMJvFy9eNC3RybBaJYuI7leSZJnwUHfi5sPAfJ9JruU6VMJbe8Bj1HpRnW8g==",
+  "dgSpecHash": "QVN+jcHKxtYDmXTYpyzLHBqxLfX6LqBd11iykG6JVcV2L5r7IXPiDhrDgEozjBF+5rOUUBIEwHAmvnrIKLP+jg==",
   "success": true,
-  "projectFilePath": "R:\\UmbracoForms.Mailchimp.WorkFlow\\Our.Umbraco.Forms.Mailchimp.Workflow\\Our.Umbraco.Forms.Mailchimp.Workflow.csproj",
+  "projectFilePath": "R:\\UmbracoForms.Mailchimp.WorkFlow\\Our.Umbraco.Forms.MailChimpWorkflow\\Our.Umbraco.Forms.MailChimpWorkflow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aaron\\.nuget\\packages\\csharptest.net.collections-netstd2\\14.906.1403.1084\\csharptest.net.collections-netstd2.14.906.1403.1084.nupkg.sha512",
     "C:\\Users\\aaron\\.nuget\\packages\\dazinator.extensions.fileproviders\\2.0.0\\dazinator.extensions.fileproviders.2.0.0.nupkg.sha512",

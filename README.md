@@ -1,3 +1,9 @@
+# UmbracoForm Mailchimp WorkFlow 4.0.0
+This package is for Umbraco 9.0.1 and umbracoforms 9.0.1
+https://www.nuget.org/packages/Our.Umbraco.Forms.MailChimpWorkflow/
+```sh
+dotnet add package Our.Umbraco.Forms.MailChimpWorkflow -Version 3.0.0
+```
 # UmbracoForm Mailchimp WorkFlow 3.0.0
 This package is for Umbraco 8.4.1 and umbracoforms 8.3.0 
 https://www.nuget.org/packages/UmbracoForm.MailChimp.WorkFlow/

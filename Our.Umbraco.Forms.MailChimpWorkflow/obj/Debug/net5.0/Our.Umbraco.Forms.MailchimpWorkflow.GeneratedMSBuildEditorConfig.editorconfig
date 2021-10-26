@@ -6,5 +6,5 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = Our.Umbraco.Forms.Mailchimp.Workflow
-build_property.ProjectDir = R:\UmbracoForms.Mailchimp.WorkFlow\Our.Umbraco.Forms.Mailchimp.Workflow\
+build_property.RootNamespace = Our.Umbraco.Forms.MailChimpWorkflow
+build_property.ProjectDir = R:\UmbracoForms.Mailchimp.WorkFlow\Our.Umbraco.Forms.MailChimpWorkflow\
