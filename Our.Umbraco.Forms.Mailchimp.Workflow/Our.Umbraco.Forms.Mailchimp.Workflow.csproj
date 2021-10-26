@@ -12,9 +12,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="MailChimp.Net.V3" Version="5.3.1" />
         <PackageReference Include="Umbraco.Cms.Web.Website" Version="9.0.1" />
         <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="9.0.1" />
         <PackageReference Include="Umbraco.Forms.Core" Version="9.0.1" />
+        <PackageReference Include="Umbraco.Forms.Core.Providers" Version="9.0.1" />
     </ItemGroup>
 
     <ItemGroup>
