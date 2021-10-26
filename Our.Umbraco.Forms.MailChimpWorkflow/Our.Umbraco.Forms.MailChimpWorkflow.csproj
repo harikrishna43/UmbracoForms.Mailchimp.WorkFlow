@@ -3,7 +3,7 @@
         <TargetFramework>net5.0</TargetFramework>
         <ContentTargetFolders>.</ContentTargetFolders>
         <Product>Our.Umbraco.Forms.Mailchimp.Workflow</Product>
-        <PackageId>Our.Umbraco.Forms.Mailchimp.Workflow</PackageId>
+        <PackageId>Our.Umbraco.Forms.MailChimpWorkflow</PackageId>
         <Title>Our.Umbraco.Forms.Mailchimp.Workflow</Title>
         <Description>Umbraco Forms V9 Mailchimp Integration WorkflowType</Description>
         <Product>...</Product>
@@ -18,7 +18,7 @@
         <PackageIcon>mailchimpICO.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageReleaseNotes>Updated to work with Umbraco Forms V9</PackageReleaseNotes>
-        <PackageLicenseExpression>GPLv3</PackageLicenseExpression>
+        <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 

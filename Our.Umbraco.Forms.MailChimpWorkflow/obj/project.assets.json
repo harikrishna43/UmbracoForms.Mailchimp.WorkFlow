@@ -10765,7 +10765,7 @@
     "version": "4.0.0",
     "restore": {
       "projectUniqueName": "R:\\UmbracoForms.Mailchimp.WorkFlow\\Our.Umbraco.Forms.MailChimpWorkflow\\Our.Umbraco.Forms.MailChimpWorkflow.csproj",
-      "projectName": "Our.Umbraco.Forms.Mailchimp.Workflow",
+      "projectName": "Our.Umbraco.Forms.MailChimpWorkflow",
       "projectPath": "R:\\UmbracoForms.Mailchimp.WorkFlow\\Our.Umbraco.Forms.MailChimpWorkflow\\Our.Umbraco.Forms.MailChimpWorkflow.csproj",
       "packagesPath": "C:\\Users\\aaron\\.nuget\\packages\\",
       "outputPath": "R:\\UmbracoForms.Mailchimp.WorkFlow\\Our.Umbraco.Forms.MailChimpWorkflow\\obj\\",
