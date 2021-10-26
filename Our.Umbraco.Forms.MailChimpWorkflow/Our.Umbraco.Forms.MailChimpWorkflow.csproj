@@ -18,7 +18,7 @@
         <PackageIcon>mailchimpICO.png</PackageIcon>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageReleaseNotes>Updated to work with Umbraco Forms V9</PackageReleaseNotes>
-        <PackageLicenseExpression>GNU GPLv3</PackageLicenseExpression>
+        <PackageLicenseExpression>GPLv3</PackageLicenseExpression>
         <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     </PropertyGroup>
 
