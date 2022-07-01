@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ContentTargetFolders>.</ContentTargetFolders>
+        <Product>Our.Umbraco.Forms.Mailchimp.Workflow</Product>
+        <PackageId>Our.Umbraco.Forms.MailChimpWorkflow</PackageId>
+        <Title>Our.Umbraco.Forms.Mailchimp.Workflow</Title>
+        <Description>Umbraco Forms V9 Mailchimp Integration WorkflowType</Description>
+        <Product>...</Product>
+        <PackageTags>UmbracoForms,Mailchimp Subscriber to list,umraco form workflow,Mailchimp</PackageTags>
+        <RootNamespace>Our.Umbraco.Forms.MailChimpWorkflow</RootNamespace>
+        <Version>5.0.0</Version>
+        <Company>Harikrishna Parmar, UmbHost Limited</Company>
+        <Copyright>Copyright 2021 </Copyright>
+        <RepositoryType>Git</RepositoryType>
+        <PackageProjectUrl>https://github.com/UmbHost/UmbracoForms.Mailchimp.WorkFlow/tree/umbraco-v9</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/UmbHost/UmbracoForms.Mailchimp.WorkFlow/tree/umbraco-v9</RepositoryUrl>
+        <PackageIcon>mailchimpICO.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReleaseNotes>Updated to work with Umbraco Forms V9</PackageReleaseNotes>
+        <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="MailChimp.Net.V3" Version="5.3.1" />
+        <PackageReference Include="Umbraco.Cms.Web.Website" Version="10.0.0" />
+        <PackageReference Include="Umbraco.Cms.Web.BackOffice" Version="10.0.0" />
+        <PackageReference Include="Umbraco.Forms.Core" Version="10.0.0" />
+        <PackageReference Include="Umbraco.Forms.Core.Providers" Version="10.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="App_Plugins\Our.Umbraco.Forms.Mailchimp.Workflow\**\*.*">
+            <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+        </Content>
+        <None Include="build\**\*.*">
+            <Pack>True</Pack>
+            <PackagePath>buildTransitive</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\mailchimpICO.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+</Project>
