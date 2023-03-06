@@ -1,0 +1,10 @@
+{
+  "Category": "Campaign & Marketing",
+  "LicenseTypes": [ "Free" ],
+  "PackageType": "Integration",
+  "Tags": [
+    "forms",
+    "workflow"
+  ],
+  "Title": "Mailchimp Umbraco Forms Workflow"
+}
