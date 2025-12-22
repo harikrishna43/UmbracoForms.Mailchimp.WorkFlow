@@ -1,4 +1,3 @@
-**Umbraco Forms: Workflow: Mailchimp **
 **Umbraco Forms: Mailchimp Workflow**
 =======================
 
