@@ -19,6 +19,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F9889EC7-0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "uTheme", "uTheme\uTheme.csproj", "{12178676-C22A-49BD-AA60-144DCAC9F3A9}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F70E7928-017A-4E82-A208-CCCECA0F26DD}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		mailchimpICO.png = mailchimpICO.png
+		README.md = README.md
+		SECURITY.md = SECURITY.md
+		umbraco-marketplace-readme.md = umbraco-marketplace-readme.md
+		_config.yml = _config.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

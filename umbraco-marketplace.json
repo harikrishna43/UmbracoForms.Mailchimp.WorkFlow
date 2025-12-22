@@ -1,0 +1,32 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "Title": "Umbraco Forms: Mailchimp Workflow Type",
+  "Description": "Send/Subscribe form data to Mailchimp v17",
+  "Category": "Editor Tools",
+  "AlternateCategory": "Developer Tools",
+  "IssueTrackerUrl": "https://github.com/harikrishna43/uThemes.FlaticonPicker/issues",
+  "PackageType": "Integration",
+  "LicenseTypes": [
+    "Free"
+  ],
+  "Tags": [
+    "Umbraco Forms",
+    "Mailchimp",
+    "Workflow",
+    "uThemes",
+    "Umbraco 17",
+    ".NET 10",
+    "umbraco-marketplace"
+  ],
+  "AuthorDetails": {
+    "Name": "Harikrushna Parmar",
+    "Description": "Harikrushna Parmar is an Umbraco Master who loves explore challenges and working with agencies on Umbraco CMS.",
+    "Url": "https://www.harikrishnaparmar.co.in",
+    "ImageUrl": "https://www.harikrishnaparmar.co.in/media/4a0hszkl/hk.jpg",
+    "Contributors": []
+  },
+  "PackagesByAuthor": [ { "PackageId": "uThemes.FlaticonPicker" } ],
+  "RelatedPackages": [ { "PackageId": "uThemes.FlaticonPicker" } ],
+  "LookingForContributors": true,
+  "LookingForMaintainer": false
+}

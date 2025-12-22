@@ -15,10 +15,11 @@
 		<Title>UmbracoForm.MailChimp.WorkFlow</Title>
 		<Description>Umbraco Forms V17 Mailchimp Integration WorkflowType</Description>
 		<Product>...</Product>
-		<PackageTags>UmbracoForms,Mailchimp Subscriber to list,umraco form workflow,Mailchimp</PackageTags>
-		<RootNamespace>Our.Umbraco.Forms.MailChimpWorkflow</RootNamespace>
+		<PackageTags>NET10 Umbraco-CMS Umbraco-Forms Mailchimp Subscriber-to-Mailchimp-list,umbraco-form-workflow Mailchimp umbraco-marketplace</PackageTags>
+		<RootNamespace>UmbracoForm.MailChimp.WorkFlow</RootNamespace>
 		<Version>17.0.0.0</Version>
-		<Company>Harikrishna Parmar | uThemes | madnat technologies</Company>
+		<Authors>Harikrushna Parmar | uThemes</Authors>
+		<Company>uThemes - madnat Technologies</Company>
 		<Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © uThemes - Madnat Technologies</Copyright>
 		<RepositoryType>Git</RepositoryType>
 		<PackageProjectUrl>https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow</PackageProjectUrl>
@@ -28,6 +29,7 @@
 		<PackageReleaseNotes>Updated package compatible with Umbraco Forms v17 </PackageReleaseNotes>
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<PackageTags>umbraco umbraco-cms umbraco17 property-editor flaticon </PackageTags>
 	</PropertyGroup>
 
 

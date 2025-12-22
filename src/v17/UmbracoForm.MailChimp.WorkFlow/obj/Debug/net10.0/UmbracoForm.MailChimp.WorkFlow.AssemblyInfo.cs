@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Harikrishna Parmar | uThemes | madnat technologies")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("uThemes - madnat Technologies")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2025 © uThemes - Madnat Technologies")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Umbraco Forms V17 Mailchimp Integration WorkflowType")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("17.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("17.0.0.0+31d53c5d9b332f45d8410983e1135dd665e79060")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("17.0.0.0+38d0b04cfbb9fe480a564f99a9a286f117163b01")]
 [assembly: System.Reflection.AssemblyProductAttribute("...")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UmbracoForm.MailChimp.WorkFlow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("17.0.0.0")]

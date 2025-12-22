@@ -1,10 +1,14 @@
-name: .NET
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: Build & Publish NuGet - UmbracoForm-Mailchimp Workflow
 
 on:
   push:
-    branches: [ umbraco-v9 ]
-  pull_request:
-    branches: [ umbraco-v9 ]
+    #branches: [ "main" ]
+  
+    tags:
+      - "v*"
 
 jobs:
   build:
@@ -12,14 +16,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+    # 1. Checkout
+    - uses: actions/checkout@v4
       with:
-        dotnet-version: 5.0.x
-    - name: Restore dependencies
-      run: dotnet restore
-    - name: Build
-      run: dotnet build --no-restore
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
+        fetch-depth: 0
+
+    # 2. Setup Node (for Vite/Lit)
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+          node-version: 20
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 10.0.x
+
+    # 5. Calculate version
+    - name: Calculate Version
+      id: version
+      run: |
+          VERSION=$(git describe --tags --abbrev=0 | sed 's/v//')
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+   # 6. Build & Pack
+    - name: Pack NuGet
+      run: dotnet pack src/v17/UmbracoForm.MailChimp.WorkFlow.csproj -c Release -p:PackageVersion=${{ steps.version.outputs.version }} -o ./nupkg
+   
+   # 7. Publish to NuGet
+    - name: Push to NuGet
+      run: dotnet nuget push **\*.nupkg -k ${{secrets.NUGET_KEY}} -s https://api.nuget.org/v3/index.json --skip-duplicate
