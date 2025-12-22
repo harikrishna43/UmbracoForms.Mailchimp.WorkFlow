@@ -38,7 +38,10 @@ jobs:
       run: |
           VERSION=$(git describe --tags --abbrev=0 | sed 's/v//')
           echo "version=$VERSION" >> $GITHUB_OUTPUT
-
+ # 6. Build & Pack
+    - name: build
+      run: dotnet build src/v17/UmbracoForm.MailChimp.WorkFlow/UmbracoForm.MailChimp.WorkFlow.csproj -c Release -p:PackageVersion=${{ steps.version.outputs.version }} -o ./nupkg
+   
    # 6. Build & Pack
     - name: Pack NuGet
       run: dotnet pack src/v17/UmbracoForm.MailChimp.WorkFlow/UmbracoForm.MailChimp.WorkFlow.csproj -c Release -p:PackageVersion=${{ steps.version.outputs.version }} -o ./nupkg
