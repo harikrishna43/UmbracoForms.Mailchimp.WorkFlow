@@ -29,10 +29,12 @@
 		<PackageReleaseNotes>Updated package compatible with Umbraco Forms v17 </PackageReleaseNotes>
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<PackageTags>umbraco umbraco-cms umbraco17 property-editor flaticon </PackageTags>
 	</PropertyGroup>
 
-
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath=""/>
+		<None Include="mailchimpICO.png" Pack="true" PackagePath=""/>
+	</ItemGroup>
 	<ItemGroup>
 		<FrameworkReference Include="Microsoft.AspNetCore.App" />
 	</ItemGroup>
@@ -59,3 +61,4 @@
 	</ItemGroup>
 
 </Project>
+	

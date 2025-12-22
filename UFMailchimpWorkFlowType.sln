@@ -12,6 +12,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v9", "v9", "{BDD7C587-9D75-4296-B536-967355B622EE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "v17", "v17", "{1184AD94-3C61-4380-BBFD-DBE3B1090CDB}"
+	ProjectSection(SolutionItems) = preProject
+		mailchimpICO.png = mailchimpICO.png
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UmbracoForm.MailChimp.WorkFlow", "src\v17\UmbracoForm.MailChimp.WorkFlow\UmbracoForm.MailChimp.WorkFlow.csproj", "{8520B2E4-73AC-411B-BCC0-493520C768F5}"
 EndProject
@@ -27,6 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{F70E7928-0
 		README.md = README.md
 		SECURITY.md = SECURITY.md
 		umbraco-marketplace-readme.md = umbraco-marketplace-readme.md
+		umbraco-marketplace.json = umbraco-marketplace.json
 		_config.yml = _config.yml
 	EndProjectSection
 EndProject

@@ -1,3 +1,4 @@
+D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\bin\Debug\net10.0\UmbracoForm.MailChimp.WorkFlow.staticwebassets.runtime.json
 D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\bin\Debug\net10.0\UmbracoForm.MailChimp.WorkFlow.staticwebassets.endpoints.json
 D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\bin\Debug\net10.0\UmbracoForm.MailChimp.WorkFlow.deps.json
 D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\bin\Debug\net10.0\UmbracoForm.MailChimp.WorkFlow.dll
@@ -29,4 +30,3 @@ D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp
 D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\obj\Debug\net10.0\refint\UmbracoForm.MailChimp.WorkFlow.dll
 D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\obj\Debug\net10.0\UmbracoForm.MailChimp.WorkFlow.pdb
 D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\obj\Debug\net10.0\ref\UmbracoForm.MailChimp.WorkFlow.dll
-D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v17\UmbracoForm.MailChimp.WorkFlow\bin\Debug\net10.0\UmbracoForm.MailChimp.WorkFlow.staticwebassets.runtime.json
