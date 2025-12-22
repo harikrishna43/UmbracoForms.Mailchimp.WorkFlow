@@ -7,14 +7,14 @@
 [![License](https://img.shields.io/github/license/harikrishna43/UmbracoForm.MailChimp.WorkFlow?label=License)](https://github.com/harikrishna43/UmbracoForm.MailChimp.WorkFlow/blob/main/LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/harikrishna43/UmbracoForm.MailChimp.WorkFlow?label=Stars)](https://github.com/harikrishna43/UmbracoForm.MailChimp.WorkFlow/stargazers)
 
-# UmbracoForm Mailchimp WorkFlow 17.0.0.1
+# v17.0.0.2
 This package is for Umbraco CMS v17.x.x and umbracoforms v17.x.x
 [nuget](https://www.nuget.org/packages/UmbracoForm.MailChimp.WorkFlow)
 ```sh
 dotnet add package UmbracoForm.MailChimp.WorkFlow --version 17.0.0.2
 ```
 
-# UmbracoForm Mailchimp WorkFlow 4.0.0
+# v4.0.0
 This package is for Umbraco 9.0.1 and umbracoforms 9.0.1
 https://www.nuget.org/packages/Our.Umbraco.Forms.MailChimpWorkflow/
 ```sh
