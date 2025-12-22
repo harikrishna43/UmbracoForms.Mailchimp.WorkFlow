@@ -1,0 +1,28 @@
+﻿@using Umbraco.SampleSite.Models
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Contact>
+@{
+    Layout = "_Master.cshtml";
+}
+
+<partial name="Partials/SectionHeader"/>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>@Model.MapHeader</h2>
+                @Model.MapCoordinates
+            </div>
+            <div class="col-md-6">
+                <h2>@Model.ContactFormHeader</h2>
+                @Model.ContactIntro
+                <partial name="Partials/ContactForm" model="@(new ContactFormViewModel())"/>
+
+
+                @await Component.InvokeAsync("RenderForm", new { formId = Guid.Parse("8650e96c-770e-4633-a83d-d1512c00e6b6"),
+                theme = "default",
+                                includeScripts = false })
+            </div>
+        </div>
+    </div>
+</section>

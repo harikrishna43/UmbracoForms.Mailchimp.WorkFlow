@@ -1,0 +1,2 @@
+D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v9\UFMailchimpWorkFlowType\obj\Debug\UFMailchimpWorkFlowType.csproj.AssemblyReference.cache
+D:\Madnat\Projects\UmbracoForms.Mailchimp.WorkFlow\src\v9\UFMailchimpWorkFlowType\obj\Debug\UFMailchimpWorkFlowType.csproj.CoreCompileInputs.cache

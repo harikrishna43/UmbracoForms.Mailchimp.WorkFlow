@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\UmbracoForm.MailChimp.WorkFlow.props" />
+</Project>
