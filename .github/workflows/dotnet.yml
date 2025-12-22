@@ -41,7 +41,7 @@ jobs:
 
    # 6. Build & Pack
     - name: Pack NuGet
-      run: dotnet pack src/v17/UmbracoForm.MailChimp.WorkFlow.csproj -c Release -p:PackageVersion=${{ steps.version.outputs.version }} -o ./nupkg
+      run: dotnet pack src/v17/UmbracoForm.MailChimp.WorkFlow/UmbracoForm.MailChimp.WorkFlow.csproj -c Release -p:PackageVersion=${{ steps.version.outputs.version }} -o ./nupkg
    
    # 7. Publish to NuGet
     - name: Push to NuGet
