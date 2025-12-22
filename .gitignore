@@ -4,3 +4,5 @@ packages/
 UFMailchimpWorkFlowType/App_Data/
 UFMailchimpWorkFlowType/bin
 UFMailchimpWorkFlowType/obj
+/src/v17/UmbracoForm.MailChimp.WorkFlow/obj
+/src/v17/UmbracoForm.MailChimp.WorkFlow/bin

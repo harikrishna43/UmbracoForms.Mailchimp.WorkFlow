@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("2025 © uThemes - Madnat Technologies")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Umbraco Forms V17 Mailchimp Integration WorkflowType")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("17.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("17.0.0.0+95ad513d4076e38c4aa8527afeb80347a986416c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("17.0.0.0+7eb81ef4195e7a2313f3dbe696df10b53928f0b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("...")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UmbracoForm.MailChimp.WorkFlow")]
 [assembly: System.Reflection.AssemblyVersionAttribute("17.0.0.0")]

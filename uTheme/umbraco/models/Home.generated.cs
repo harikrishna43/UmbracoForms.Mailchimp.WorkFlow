@@ -154,6 +154,14 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string HeroHeader => this.Value<string>(_publishedValueFallback, "heroHeader");
 
 		///<summary>
+		/// Icon
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.0.2+497c31e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("icon")]
+		public virtual string Icon => this.Value<string>(_publishedValueFallback, "icon");
+
+		///<summary>
 		/// Logo: Optional. If you add a logo it'll be used in the upper left corner instead of the site name. Make sure to use a transparent logo for best results
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "17.0.2+497c31e")]
