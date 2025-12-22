@@ -26,5 +26,13 @@
     "Contributors": []
   },
   "LookingForContributors": true,
-  "LookingForMaintainer": false
+  "LookingForMaintainer": false,
+  "Screenshots": [
+    {
+      "ImageUrl": "https://github.com/harikrishna43/UmbracoForms.Mailchimp.WorkFlow/blob/95ad513d4076e38c4aa8527afeb80347a986416c/mailchimpICO.png",
+      "VideoUrl": "https://youtu.be/uFbVA2hGb2E",
+      "Caption": "How to configure workflow"
+    }
+  ],
+  "VideoUrl": "https://youtu.be/uFbVA2hGb2E"
 }
