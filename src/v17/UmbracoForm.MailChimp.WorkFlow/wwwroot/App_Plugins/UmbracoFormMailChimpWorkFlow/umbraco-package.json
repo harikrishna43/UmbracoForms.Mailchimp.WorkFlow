@@ -1,0 +1,14 @@
+{
+  "id": "UmbracoForm.MailChimp.WorkFlow",
+  "name": "UmbracoForm.MailChimp.WorkFlow",
+  "version": "0.0.0",
+  "allowTelemetry": true,
+  "extensions": [
+    {
+      "name": "Umbraco Form Mail Chimp Work Flow Bundle",
+      "alias": "UmbracoForm.MailChimp.WorkFlow.Bundle",
+      "type": "bundle",
+      "js": "/App_Plugins/UmbracoFormMailChimpWorkFlow/umbraco-form-mail-chimp-work-flow.js"
+    }
+  ]
+}
